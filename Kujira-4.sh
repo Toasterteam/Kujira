@@ -56,7 +56,7 @@ sed -i "s/pruning-keep-recent *=.*/pruning-keep-recent = \"809\"/g" $HOME/.kujir
 sed -i "s/pruning-interval *=.*/pruning-interval = \"43\"/g" $HOME/.kujira/config/app.toml
 #sed -i.bak -e "s/indexer *=.*/indexer = \"null\"/g" $HOME/.kujira/config/config.toml
 sed -i "s/index-events =.*/index-events = [\"tx.hash\",\"tx.height\"]/g" $HOME/.kujira/config/app.toml
-wget -O $HOME/.kujira/config/genesis.json "https://raw.githubusercontent.com/Team-Kujira/networks/master/testnet/harpoon-4.json
+wget -O $HOME/.kujira/config/genesis.json https://raw.githubusercontent.com/Team-Kujira/networks/master/testnet/harpoon-4.json
 kujirad tendermint unsafe-reset-all
 wget -O $HOME/.kujira/config/addrbook.json https://raw.githubusercontent.com/Team-Kujira/networks/master/testnet/addrbook.json 
 echo -e '\n\e[42mRunning\e[0m\n' && sleep 1
